@@ -82,7 +82,7 @@ pages_container.appendChild(input_pages);
 // Create an array to contain books
 let myLibrary = [];
 
-//Create an object constructor for a book
+// Create an object constructor for a book
 function Book (title, author, pages) {
     this.title = title;
     this.author = author;
@@ -90,4 +90,7 @@ function Book (title, author, pages) {
     this.id = crypto.randomUUID();
     this.isRead = false;
 }
+
+// Create a function that create and adds a book to myLibrary
+
 
