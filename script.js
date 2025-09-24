@@ -1,4 +1,4 @@
-// Create DOM elements
+// Create DOM Elements
 const books_container = document.createElement ("div");
 const book_card = document.createElement("div");
 const title = document.createElement ("h3");
@@ -20,3 +20,16 @@ const input_author = document.createElement("input");
 const pages_container = document.createElement("div");
 const label_pages = document.createElement("label");
 const input_pages = document.createElement("input");
+
+// Set Element's Attribute and Type
+books_container.className = 'books_container';
+book_card.className = 'book_card';
+title.className = 'info title';
+author.className = 'info author';
+pages.className = 'info pages';
+isRead.className = 'button-info isRead';
+isRead.type = "button";
+removeBook.className = 'button-info remove';
+removeBook.type = "button";
+viewDetail.className = 'button-info view';
+viewDetail.type = "button";
