@@ -33,3 +33,20 @@ removeBook.className = 'button-info remove';
 removeBook.type = "button";
 viewDetail.className = 'button-info view';
 viewDetail.type = "button";
+
+form_container.className = 'form_container';
+
+title_container.className = 'label title';
+label_title.htmlFor = 'title';
+input_title.id = 'title';
+input_title.type = 'text';
+
+author_container.className = 'label author';
+label_author.htmlFor = 'author';
+input_author.id = 'author';
+input_author.type = 'text';
+
+pages_container.className = 'label pages';
+label_pages.htmlFor = 'pages';
+input_pages.id = 'pages';
+input_pages.type = 'text';
