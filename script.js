@@ -73,3 +73,12 @@ author_container.appendChild(input_author);
 form_book.appendChild(pages_container);
 pages_container.appendChild(label_pages);
 pages_container.appendChild(input_pages);
+
+
+
+
+// Functionality
+
+// Create an array to contain books
+let myLibrary = [];
+
