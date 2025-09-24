@@ -21,6 +21,7 @@ const pages_container = document.createElement("div");
 const label_pages = document.createElement("label");
 const input_pages = document.createElement("input");
 
+
 // Set Element's Attribute and Type
 books_container.className = 'books_container';
 book_card.className = 'book_card';
@@ -50,3 +51,10 @@ pages_container.className = 'label pages';
 label_pages.htmlFor = 'pages';
 input_pages.id = 'pages';
 input_pages.type = 'text';
+
+
+// Append DOM Elements
+book_card.appendChild(title);
+book_card.appendChild(isRead);
+book_card.appendChild(viewDetail);
+book_card.appendChild(removeBook);
