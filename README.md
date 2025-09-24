@@ -13,3 +13,6 @@ A simple JavaScript library management project that demonstrates the use of obje
 - CSS: for basic styling
 - JavaScript: for functionality
 - Git: for version control
+
+## Credit
+Background Image: Image by [Chris Appano][https://unsplash.com/@chrisappano] from [unsplash][https://unsplash.com/photos/background-pattern-CTFxAuOvcjI]
