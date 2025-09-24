@@ -82,3 +82,12 @@ pages_container.appendChild(input_pages);
 // Create an array to contain books
 let myLibrary = [];
 
+//Create an object constructor for a book
+function Book (title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.id = crypto.randomUUID();
+    this.isRead = false;
+}
+
