@@ -21,6 +21,7 @@ const pages_container = document.createElement("div");
 const label_pages = document.createElement("label");
 const input_pages = document.createElement("input");
 const submit_button = document.createElement("button");
+const reset_button = document.createElement("button")
 
 
 // Set Element's Attribute and Type
@@ -54,7 +55,10 @@ input_pages.id = 'pages';
 input_pages.type = 'text';
 
 submit_button.type = "submit";
-submit_button.className = 'submit-button'
+submit_button.className = 'submit-button';
+
+reset_button.type = "reset";
+reset_button.className = "reset-button";
 
 
 // Append DOM Elements
@@ -79,11 +83,7 @@ pages_container.appendChild(label_pages);
 pages_container.appendChild(input_pages);
 
 form_book.appendChild(submit_button);
-
-
-// Query Selector HTML's Elements
-const addBook = document.querySelector('.button.add');
-const viewBook = document.querySelector('.button.view-book');
+form_book.appendChild(reset_button);
 
 
 // Element's Text Content
@@ -99,9 +99,12 @@ label_title.textContent = "Title: ";
 label_author.textContent = "Author: ";
 label_pages.textContent = "Pages: ";
 submit_button.textContent = "Submit";
+reset_button.textContent = "Reset";
 
 
-
+// Query Selector HTML's Elements
+const addBook = document.querySelector('.button.add');
+const viewBook = document.querySelector('.button.view-book');
 
 
 
