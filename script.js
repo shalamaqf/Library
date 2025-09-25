@@ -80,9 +80,31 @@ pages_container.appendChild(input_pages);
 
 form_book.appendChild(submit_button);
 
+
 // Query Selector HTML's Elements
 const addBook = document.querySelector('.button.add');
 const viewBook = document.querySelector('.button.view-book');
+
+
+// Element's Text Content
+title.textContent = "Title: ";
+author.textContent = "Author: ";
+pages.textContent = "Pages: ";
+isRead.textContent = "Not Read Yet";
+removeBook.textContent = "Remove Book";
+viewDetail.textContent = "View Details";
+
+form_title.textContent = "Book's Details";
+label_title.textContent = "Title: ";
+label_author.textContent = "Author: ";
+label_pages.textContent = "Pages: ";
+submit_button.textContent = "Submit";
+
+
+
+
+
+
 
 
 // Functionality
