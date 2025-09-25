@@ -140,3 +140,8 @@ addBook.addEventListener('click', () => {
     appendForm();
 })
 
+// Create a function that appends the form to the screen
+function appendForm() {
+    document.body.appendChild(form_container);
+}
+
