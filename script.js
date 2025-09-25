@@ -219,3 +219,18 @@ function toggleReadStatus(Book, isReadButton) {
     Book.isRead = !Book.isRead;
     isReadButton.textContent = Book.isRead ? "Have Read" : "Not Read Yet";
 }
+
+// Create a function that remove a book from the array and books container
+function removeBook(myLibrary, book_card, Book) {
+    // Remove from array
+    const bookID = Book.id;
+    
+    const index = myLibrary.findIndex(book => book.id === bookID);
+
+    if (index !== -1) {
+        myLibrary.splice(index, 1);
+    }
+
+    // Remove from books container
+    book_card.remove();
+}
