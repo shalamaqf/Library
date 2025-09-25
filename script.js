@@ -113,7 +113,9 @@ const viewBook = document.querySelector('.button.view-book');
 
 
 
-// Functionality
+//////////////////////////////////////////
+///////////// FUNCTIONALITY //////////////
+//////////////////////////////////////////
 
 // Create an array to contain books
 let myLibrary = [];
@@ -126,3 +128,15 @@ function Book (title, author, pages) {
     this.id = crypto.randomUUID();
     this.isRead = false;
 }
+
+
+//
+// Add New Book Feature
+//
+
+// Add an event listener to 'Add New Book' button
+// When user click it, form will appears in screen
+addBook.addEventListener('click', () => {
+    appendForm();
+})
+
