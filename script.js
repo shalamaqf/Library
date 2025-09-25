@@ -156,9 +156,12 @@ function appendForm() {
     that when user click it, it will calls functions that handle user input,
     create a book object,
     and add it to the library array.
+    'Add New Book' button will enable again and the form will disappear.
 */
 form_book.addEventListener('submit', (e) => {
     e.preventDefault();
     handleUserInput();
+    addBook.disabled = false;
+    form_container.remove();
 })
 
