@@ -43,16 +43,19 @@ title_container.className = 'label title';
 label_title.htmlFor = 'title';
 input_title.id = 'title';
 input_title.type = 'text';
+input_title.required = true;
 
 author_container.className = 'label author';
 label_author.htmlFor = 'author';
 input_author.id = 'author';
 input_author.type = 'text';
+input_author.required = true;
 
 pages_container.className = 'label pages';
 label_pages.htmlFor = 'pages';
 input_pages.id = 'pages';
 input_pages.type = 'text';
+input_pages.required = true;
 
 submit_button.type = "submit";
 submit_button.className = 'submit-button';
