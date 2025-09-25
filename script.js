@@ -130,18 +130,35 @@ function Book (title, author, pages) {
 }
 
 
-//
+///////////////////////
 // Add New Book Feature
-//
+///////////////////////
 
-// Add an event listener to 'Add New Book' button
-// When user click it, form will appears in screen
+/*
+    Add an event listener to 'Add New Book' button
+    When user click it, form will appears in screen.
+*/
 addBook.addEventListener('click', () => {
     appendForm();
 })
 
-// Create a function that appends the form to the screen
+/* 
+    Create a function that appends the form to the screen and 
+    disabled 'Add New Book' button.
+*/
 function appendForm() {
     document.body.appendChild(form_container);
+    addBook.disabled = true;
 }
+
+/* 
+    Add an event listener to 'Submit' button,
+    that when user click it, it will calls functions that handle user input,
+    create a book object,
+    and add it to the library array.
+*/
+form_book.addEventListener('submit', (e) => {
+    e.preventDefault();
+    handleUserInput();
+})
 
