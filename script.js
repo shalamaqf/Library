@@ -146,8 +146,8 @@ function handleUserInput() {
     const pagesInput = input_pages.value;
 
     const newBook = new Book(titleInput, authorInput, pagesInput);
-
     myLibrary.push(newBook);
+    createBookCard(newBook);
 }
 
 
