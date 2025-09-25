@@ -165,3 +165,16 @@ form_book.addEventListener('submit', (e) => {
     form_container.remove();
 })
 
+/* 
+    Create a function that handle user input from the form,
+    it will create new Book object and push it to the library array.
+*/
+function handleUserInput() {
+    const titleInput = input_title.value;
+    const authorInput = input_author.value;
+    const pagesInput = input_pages.value;
+
+    const newBook = new Book(titleInput, authorInput, pagesInput);
+
+    myLibrary.push(newBook);
+}
