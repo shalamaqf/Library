@@ -168,42 +168,42 @@ function createBookCard(Book) {
     const title = document.createElement ("h3");
     const author = document.createElement ("p");
     const pages = document.createElement ("p");
-    let isRead = document.createElement("button");
-    let removeBook = document.createElement("button");
-    let viewDetail = document.createElement("button");
+    let isReadButton = document.createElement("button");
+    let removeBookButton = document.createElement("button");
+    let viewDetailButton = document.createElement("button");
 
     // Set its type and attribute
     book_card.className = 'book-card';
     title.className = 'info title';
     author.className = 'info author';
     pages.className = 'info pages';
-    isRead.className = 'button-info isRead';
-    isRead.type = "button";
-    removeBook.className = 'button-info remove';
-    removeBook.type = "button";
-    viewDetail.className = 'button-info view';
-    viewDetail.type = "button";
+    isReadButton.className = 'button-info isRead';
+    isReadButton.type = "button";
+    removeBookButton.className = 'button-info remove';
+    removeBookButton.type = "button";
+    viewDetailButton.className = 'button-info view';
+    viewDetailButton.type = "button";
 
     // Set its text content
     title.textContent = "Title: " + Book.title;
     author.textContent = "Author: " + Book.author;
     pages.textContent = "Pages: " + Book.pages;
-    isRead.textContent = "Not Read Yet";
-    removeBook.textContent = "Remove Book";
-    viewDetail.textContent = "View Details";
+    isReadButton.textContent = "Not Read Yet";
+    removeBookButton.textContent = "Remove Book";
+    viewDetailButton.textContent = "View Details";
 
 
     // Add event listeners to the buttons
-    isRead.addEventListener('click', () => {
-        toggleReadStatus(Book, isRead);
+    isReadButton.addEventListener('click', () => {
+        toggleReadStatus(Book, isReadButton);
     })
 
 
     // Append it to the book card
     book_card.appendChild(title);
-    book_card.appendChild(isRead);
-    book_card.appendChild(viewDetail);
-    book_card.appendChild(removeBook);
+    book_card.appendChild(isReadButton);
+    book_card.appendChild(viewDetailButton);
+    book_card.appendChild(removeBookButton);
 
     // Append the book card to books container
     books_container.appendChild(book_card);
