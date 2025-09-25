@@ -192,6 +192,13 @@ function createBookCard(Book) {
     removeBook.textContent = "Remove Book";
     viewDetail.textContent = "View Details";
 
+
+    // Add event listeners to the buttons
+    isRead.addEventListener('click', () => {
+        toggleReadStatus(Book, isRead);
+    })
+
+
     // Append it to the book card
     book_card.appendChild(title);
     book_card.appendChild(isRead);
@@ -200,4 +207,11 @@ function createBookCard(Book) {
 
     // Append the book card to books container
     books_container.appendChild(book_card);
+}
+
+
+// Create a function to toggle the read status
+function toggleReadStatus(Book, isReadButton) {
+    Book.isRead = !Book.isRead;
+    isReadButton.textContent = Book.isRead ? "Have Read" : "Not Read Yet";
 }
