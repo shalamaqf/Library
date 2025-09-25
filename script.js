@@ -20,11 +20,12 @@ const input_author = document.createElement("input");
 const pages_container = document.createElement("div");
 const label_pages = document.createElement("label");
 const input_pages = document.createElement("input");
+const submit_button = document.createElement("button");
 
 
 // Set Element's Attribute and Type
-books_container.className = 'books_container';
-book_card.className = 'book_card';
+books_container.className = 'books-container';
+book_card.className = 'book-card';
 title.className = 'info title';
 author.className = 'info author';
 pages.className = 'info pages';
@@ -35,7 +36,7 @@ removeBook.type = "button";
 viewDetail.className = 'button-info view';
 viewDetail.type = "button";
 
-form_container.className = 'form_container';
+form_container.className = 'form-container';
 
 title_container.className = 'label title';
 label_title.htmlFor = 'title';
@@ -51,6 +52,9 @@ pages_container.className = 'label pages';
 label_pages.htmlFor = 'pages';
 input_pages.id = 'pages';
 input_pages.type = 'text';
+
+submit_button.type = "submit";
+submit_button.className = 'submit-button'
 
 
 // Append DOM Elements
@@ -74,7 +78,11 @@ form_book.appendChild(pages_container);
 pages_container.appendChild(label_pages);
 pages_container.appendChild(input_pages);
 
+form_book.appendChild(submit_button);
 
+// Query Selector HTML's Elements
+const addBook = document.querySelector('.button.add');
+const viewBook = document.querySelector('.button.view-book');
 
 
 // Functionality
@@ -90,7 +98,3 @@ function Book (title, author, pages) {
     this.id = crypto.randomUUID();
     this.isRead = false;
 }
-
-// Create a function that create and adds a book to myLibrary
-
-
