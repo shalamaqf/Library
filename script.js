@@ -1,12 +1,5 @@
 // Create DOM Elements
 const books_container = document.createElement ("div");
-const book_card = document.createElement("div");
-const title = document.createElement ("h3");
-const author = document.createElement ("p");
-const pages = document.createElement ("p");
-let isRead = document.createElement("button");
-let removeBook = document.createElement("button");
-let viewDetail = document.createElement("button");
 
 const form_container = document.createElement("div");
 const form_book = document.createElement("form");
@@ -26,16 +19,6 @@ const reset_button = document.createElement("button")
 
 // Set Element's Attribute and Type
 books_container.className = 'books-container';
-book_card.className = 'book-card';
-title.className = 'info title';
-author.className = 'info author';
-pages.className = 'info pages';
-isRead.className = 'button-info isRead';
-isRead.type = "button";
-removeBook.className = 'button-info remove';
-removeBook.type = "button";
-viewDetail.className = 'button-info view';
-viewDetail.type = "button";
 
 form_container.className = 'form-container';
 
@@ -65,11 +48,6 @@ reset_button.className = "reset-button";
 
 
 // Append DOM Elements
-book_card.appendChild(title);
-book_card.appendChild(isRead);
-book_card.appendChild(viewDetail);
-book_card.appendChild(removeBook);
-
 form_container.appendChild(form_book);
 form_book.appendChild(form_title);
 
@@ -90,13 +68,6 @@ form_book.appendChild(reset_button);
 
 
 // Element's Text Content
-title.textContent = "Title: ";
-author.textContent = "Author: ";
-pages.textContent = "Pages: ";
-isRead.textContent = "Not Read Yet";
-removeBook.textContent = "Remove Book";
-viewDetail.textContent = "View Details";
-
 form_title.textContent = "Book's Details";
 label_title.textContent = "Title: ";
 label_author.textContent = "Author: ";
@@ -177,4 +148,56 @@ function handleUserInput() {
     const newBook = new Book(titleInput, authorInput, pagesInput);
 
     myLibrary.push(newBook);
+}
+
+
+
+////////////////////
+// Book Card Feature
+////////////////////
+
+/*
+    Create a function that creates DOM elements for book card,
+    set its type and attribute,
+    it will sets element's text content,
+    and append it to the book's container.
+*/
+function createBookCard(Book) {
+    // Create DOM elements
+    const book_card = document.createElement("div");
+    const title = document.createElement ("h3");
+    const author = document.createElement ("p");
+    const pages = document.createElement ("p");
+    let isRead = document.createElement("button");
+    let removeBook = document.createElement("button");
+    let viewDetail = document.createElement("button");
+
+    // Set its type and attribute
+    book_card.className = 'book-card';
+    title.className = 'info title';
+    author.className = 'info author';
+    pages.className = 'info pages';
+    isRead.className = 'button-info isRead';
+    isRead.type = "button";
+    removeBook.className = 'button-info remove';
+    removeBook.type = "button";
+    viewDetail.className = 'button-info view';
+    viewDetail.type = "button";
+
+    // Set its text content
+    title.textContent = "Title: " + Book.title;
+    author.textContent = "Author: " + Book.author;
+    pages.textContent = "Pages: " + Book.pages;
+    isRead.textContent = "Not Read Yet";
+    removeBook.textContent = "Remove Book";
+    viewDetail.textContent = "View Details";
+
+    // Append it to the book card
+    book_card.appendChild(title);
+    book_card.appendChild(isRead);
+    book_card.appendChild(viewDetail);
+    book_card.appendChild(removeBook);
+
+    // Append the book card to books container
+    books_container.appendChild(book_card);
 }
