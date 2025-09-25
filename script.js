@@ -198,6 +198,10 @@ function createBookCard(Book) {
         toggleReadStatus(Book, isReadButton);
     })
 
+    removeBookButton.addEventListener('click', () => {
+        removeBook(myLibrary, book_card, Book);
+    })
+
 
     // Append it to the book card
     book_card.appendChild(title);
