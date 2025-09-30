@@ -101,6 +101,7 @@ function Book (title, author, pages) {
 }
 
 
+
 ///////////////////////
 // Add New Book Feature
 ///////////////////////
@@ -132,6 +133,7 @@ function appendForm() {
 form_book.addEventListener('submit', (e) => {
     e.preventDefault();
     handleUserInput();
+    form_book.reset();
     addBook.disabled = false;
     form_container.remove();
 })
@@ -219,6 +221,9 @@ function createBookCard(Book) {
 
     // Append the book card to books container
     books_container.appendChild(book_card);
+
+    console.log("New Book Card added: ", Book.title);
+    console.log(books_container.children.length);
 }
 
 
