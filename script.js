@@ -202,12 +202,20 @@ function createBookCard(Book) {
         removeBook(myLibrary, book_card, Book);
     })
 
+    viewDetailButton.addEventListener('click', () => {
+        viewDetail(book_card, viewDetailButton);
+    })
+
 
     // Append it to the book card
     book_card.appendChild(title);
     book_card.appendChild(isReadButton);
     book_card.appendChild(viewDetailButton);
     book_card.appendChild(removeBookButton);
+
+    // Attach author and pages DOM elements to the book card
+    book_card.author = author;
+    book_card.pages = pages;
 
     // Append the book card to books container
     books_container.appendChild(book_card);
@@ -233,4 +241,29 @@ function removeBook(myLibrary, book_card, Book) {
 
     // Remove from books container
     book_card.remove();
+}
+
+// Create a function that allows user to see the details of the book
+function viewDetail(book_card, viewDetailButton) {
+    if (book_card.contains(book_card.author)) {
+        hideDetails(book_card, viewDetailButton);
+    } else {
+        appendBookDetail(book_card, viewDetailButton);
+    }
+}
+
+// Create a function that appends the detail of the book to the book card
+function appendBookDetail(book_card, viewDetailButton) {
+    book_card.appendChild(book_card.author);
+    book_card.appendChild(book_card.pages);
+
+    viewDetailButton.textContent = 'Hide Details';
+}
+
+// Create a function that allows user to hide the details from the book card
+function hideDetails(book_card, viewDetailButton){
+    book_card.author.remove();
+    book_card.pages.remove();
+
+    viewDetailButton.textContent = 'View Details';
 }
