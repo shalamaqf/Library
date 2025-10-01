@@ -207,7 +207,7 @@ function createBookCard(book) {
     title.textContent = "Title: " + book.title;
     author.textContent = "Author: " + book.author;
     pages.textContent = "Pages: " + book.pages;
-    updateReadButtonStatus(book, isReadButton);
+    isReadButton.textContent = getReadStatus(book, isReadButton);
     removeBookButton.textContent = "Remove Book";
     viewDetailButton.textContent = "View Details";
 
@@ -241,14 +241,15 @@ function createBookCard(book) {
 }
 
 // Create a function that updates the state of isRead button
-function updateReadButtonStatus(book, isReadButton){
+function getReadStatus(book, isReadButton){
     isReadButton.textContent = book.isRead ? "Have Read" : "Not Read Yet";
+    return isReadButton.textContent;
 }
 
 // Create a function to toggle the read status
 function toggleReadStatus(book, isReadButton) {
     book.isRead = !book.isRead;
-    updateReadButtonStatus(book, isReadButton);
+    isReadButton.textContent = getReadStatus(book, isReadButton);
 }
 
 // Create a function that remove a book from the array and books container
