@@ -48,6 +48,13 @@ reset_button.type = "reset";
 reset_button.className = "reset-button";
 
 
+// Query Selector HTML's Elements
+const main_content = document.querySelector('.main-content');
+
+const addBook = document.querySelector('.button.add');
+const viewBook = document.querySelector('.button.view-book');
+
+
 // Append DOM Elements
 form_container.appendChild(form_book);
 form_book.appendChild(form_title);
@@ -67,7 +74,7 @@ pages_container.appendChild(input_pages);
 form_book.appendChild(submit_button);
 form_book.appendChild(reset_button);
 
-document.body.appendChild(dynamic_content);
+main_content.appendChild(dynamic_content);
 
 
 // Element's Text Content
@@ -77,15 +84,6 @@ label_author.textContent = "Author: ";
 label_pages.textContent = "Pages: ";
 submit_button.textContent = "Submit";
 reset_button.textContent = "Reset";
-
-
-// Query Selector HTML's Elements
-const main_content = document.querySelector('.main-content');
-
-const addBook = document.querySelector('.button.add');
-const viewBook = document.querySelector('.button.view-book');
-
-
 
 
 
