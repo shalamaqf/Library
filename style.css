@@ -6,3 +6,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* LAYOUT */
+body {
+  background-image: url(img/background-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
