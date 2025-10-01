@@ -118,6 +118,7 @@ addBook.addEventListener('click', () => {
         cancelForm();
     }
     else {
+        closeFormView();
         appendForm();
     }
 })
@@ -299,6 +300,7 @@ viewBook.addEventListener('click', () => {
         closeView();
     } else
     {
+        closeFormView();
         renderLibraryView();
     }
 })
@@ -336,4 +338,23 @@ function displayBooks() {
 function closeView(){
     books_container.remove();
     viewBook.textContent = 'View Books'
+}
+
+
+
+/////////////////////////////////////////
+//////// CLOSE FORM/VIEW FEATURE ////////
+/////////////////////////////////////////
+
+/* 
+    Create a function that will close form/view
+    if user click press both buttons in sequence.
+*/
+function closeFormView() {
+    if(dynamic_content.contains(form_container)){
+        cancelForm();
+    } 
+    else if (dynamic_content.contains(books_container)){
+        closeView();
+    }
 }
