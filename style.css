@@ -28,8 +28,14 @@ body {
 }
 
 .h1-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   grid-column: 1;
   grid-row: 1;
+
+  min-height: 150px;
 }
 
 .button-group {
