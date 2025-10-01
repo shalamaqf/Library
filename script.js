@@ -114,7 +114,12 @@ function Book (title, author, pages) {
     When user click it, form will appears in screen.
 */
 addBook.addEventListener('click', () => {
-    appendForm();
+    if (dynamic_content.contains(form_container)){
+        cancelForm();
+    }
+    else {
+        appendForm();
+    }
 })
 
 /* 
@@ -123,8 +128,16 @@ addBook.addEventListener('click', () => {
 */
 function appendForm() {
     dynamic_content.appendChild(form_container);
-    addBook.disabled = true;
+    addBook.textContent = 'Cancel'
 }
+
+
+// Create a function that change the text content and logic to 'New Book' button
+function cancelForm() {
+    form_container.remove();
+    form_book.reset();
+    addBook.textContent = 'Add Book';
+} 
 
 /* 
     Add an event listener to 'Submit' button,
@@ -136,9 +149,7 @@ function appendForm() {
 form_book.addEventListener('submit', (e) => {
     e.preventDefault();
     handleUserInput();
-    form_book.reset();
-    addBook.disabled = false;
-    form_container.remove();
+    cancelForm();
 })
 
 /* 
