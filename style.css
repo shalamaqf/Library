@@ -24,7 +24,7 @@ body {
 
   display: grid;
   grid-template-columns: 4fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 3fr;
 }
 
 .h1-container {
@@ -39,6 +39,10 @@ body {
 }
 
 .button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   grid-column: 1;
   grid-row: 2;
 }
