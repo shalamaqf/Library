@@ -164,7 +164,7 @@ function handleUserInput() {
     it will sets element's text content,
     and append it to the book's container.
 */
-function createBookCard(Book) {
+function createBookCard(book) {
     // Create DOM elements
     const book_card = document.createElement("div");
     const title = document.createElement ("h3");
@@ -187,9 +187,9 @@ function createBookCard(Book) {
     viewDetailButton.type = "button";
 
     // Set its text content
-    title.textContent = "Title: " + Book.title;
-    author.textContent = "Author: " + Book.author;
-    pages.textContent = "Pages: " + Book.pages;
+    title.textContent = "Title: " + book.title;
+    author.textContent = "Author: " + book.author;
+    pages.textContent = "Pages: " + book.pages;
     isReadButton.textContent = "Not Read Yet";
     removeBookButton.textContent = "Remove Book";
     viewDetailButton.textContent = "View Details";
@@ -197,11 +197,11 @@ function createBookCard(Book) {
 
     // Add event listeners to the buttons
     isReadButton.addEventListener('click', () => {
-        toggleReadStatus(Book, isReadButton);
+        toggleReadStatus(book, isReadButton);
     })
 
     removeBookButton.addEventListener('click', () => {
-        removeBook(myLibrary, book_card, Book);
+        removeBook(myLibrary, book_card, book);
     })
 
     viewDetailButton.addEventListener('click', () => {
@@ -221,24 +221,21 @@ function createBookCard(Book) {
 
     // Append the book card to books container
     books_container.appendChild(book_card);
-
-    console.log("New Book Card added: ", Book.title);
-    console.log(books_container.children.length);
 }
 
 
 // Create a function to toggle the read status
-function toggleReadStatus(Book, isReadButton) {
-    Book.isRead = !Book.isRead;
-    isReadButton.textContent = Book.isRead ? "Have Read" : "Not Read Yet";
+function toggleReadStatus(book, isReadButton) {
+    book.isRead = !book.isRead;
+    isReadButton.textContent = book.isRead ? "Have Read" : "Not Read Yet";
 }
 
 // Create a function that remove a book from the array and books container
-function removeBook(myLibrary, book_card, Book) {
+function removeBook(myLibrary, book_card, book) {
     // Remove from array
-    const bookID = Book.id;
+    const bookID = book.id;
     
-    const index = myLibrary.findIndex(book => book.id === bookID);
+    const index = myLibrary.findIndex(item => item.id === bookID);
 
     if (index !== -1) {
         myLibrary.splice(index, 1);
