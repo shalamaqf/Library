@@ -306,7 +306,15 @@ function displayBooks() {
     })
 
     // Apppend the books container to the DOM
-    if (!document.body.appendChild(books_container)){
-        document.body.appendChild(books_container)
+    if (!document.body.contains(books_container)){
+        document.body.appendChild(books_container);
+        viewBook.textContent = 'Close View';
     }
+}
+
+
+// Create a function to close the view of the books
+function closeView(){
+    books_container.remove();
+    viewBook.textContent = 'View Books'
 }
