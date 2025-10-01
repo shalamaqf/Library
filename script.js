@@ -21,6 +21,8 @@ const reset_button = document.createElement("button")
 // Set Element's Attribute and Type
 books_container.className = 'books-container';
 
+dynamic_content.className = 'dynamic-content';
+
 form_container.className = 'form-container';
 
 title_container.className = 'label title';
