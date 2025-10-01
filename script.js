@@ -269,3 +269,44 @@ function hideDetails(book_card, viewDetailButton){
 
     viewDetailButton.textContent = 'View Details';
 }
+
+
+
+////////////////////////////////////
+//////// VIEW BOOKS FEATURE ////////
+////////////////////////////////////
+
+/*
+    Create an event listener for 'View Books' button 
+    that will render books inside the library.
+*/
+viewBook.addEventListener('click', () => {
+    renderLibraryView()
+})
+
+/*
+    Create a function that clear books container,
+    then call a function to display books.
+*/
+function renderLibraryView() {
+    // Clear childs of books container 
+    books_container.innerHTML = '';
+
+    displayBooks();   
+}
+
+/* 
+    Create a function that looping thorugh the myLibrary,
+    create book card for each book then append it to the books container,
+    finally it will be appended to the DOM.
+*/
+function displayBooks() {
+    myLibrary.forEach(book => {
+        createBookCard(book);
+    })
+
+    // Apppend the books container to the DOM
+    if (!document.body.appendChild(books_container)){
+        document.body.appendChild(books_container)
+    }
+}
