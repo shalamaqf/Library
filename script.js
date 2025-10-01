@@ -1,5 +1,6 @@
 // Create DOM Elements
 const books_container = document.createElement ("div");
+const dynamic_content = document.createElement("div");
 
 const form_container = document.createElement("div");
 const form_book = document.createElement("form");
@@ -77,6 +78,8 @@ reset_button.textContent = "Reset";
 
 
 // Query Selector HTML's Elements
+const main_content = document.querySelector('.main-content');
+
 const addBook = document.querySelector('.button.add');
 const viewBook = document.querySelector('.button.view-book');
 
