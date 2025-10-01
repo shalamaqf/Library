@@ -67,6 +67,8 @@ pages_container.appendChild(input_pages);
 form_book.appendChild(submit_button);
 form_book.appendChild(reset_button);
 
+document.body.appendChild(dynamic_content);
+
 
 // Element's Text Content
 form_title.textContent = "Book's Details";
@@ -122,7 +124,7 @@ addBook.addEventListener('click', () => {
     disabled 'Add New Book' button.
 */
 function appendForm() {
-    document.body.appendChild(form_container);
+    dynamic_content.appendChild(form_container);
     addBook.disabled = true;
 }
 
@@ -284,7 +286,7 @@ function hideDetails(book_card, viewDetailButton){
     that will render books inside the library.
 */
 viewBook.addEventListener('click', () => {
-    if (document.body.contains(books_container)){
+    if (dynamic_content.contains(books_container)){
         closeView();
     } else
     {
@@ -314,8 +316,8 @@ function displayBooks() {
     })
 
     // Apppend the books container to the DOM
-    if (!document.body.contains(books_container)){
-        document.body.appendChild(books_container);
+    if (!dynamic_content.contains(books_container)){
+        dynamic_content.appendChild(books_container);
         viewBook.textContent = 'Close View';
     }
 }
