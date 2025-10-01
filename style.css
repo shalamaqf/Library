@@ -16,3 +16,23 @@ body {
   background-position: center;
   min-height: 100vh;
 }
+
+.main-content {
+  max-width: 100%;
+  min-width: 300px;
+  min-height: 100%;
+
+  display: grid;
+  grid-template-columns: 4fr;
+  grid-template-rows: 1fr 3fr;
+}
+
+.h1-container {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.button-group {
+  grid-column: 1;
+  grid-row: 2;
+}
