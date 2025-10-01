@@ -281,7 +281,12 @@ function hideDetails(book_card, viewDetailButton){
     that will render books inside the library.
 */
 viewBook.addEventListener('click', () => {
-    renderLibraryView()
+    if (document.body.contains(books_container)){
+        closeView();
+    } else
+    {
+        renderLibraryView();
+    }
 })
 
 /*
