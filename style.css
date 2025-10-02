@@ -47,7 +47,11 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30em;
+  gap: clamp(1em, 5vw, 3em);
+
+  width: 100%;
+  min-width: 300px;
+  margin: 0 auto;
 
   grid-column: 1;
   grid-row: 2;
