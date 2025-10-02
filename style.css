@@ -119,3 +119,14 @@ h1 {
   font-size: 4rem;
   color: white;
 }
+
+.button {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  border-radius: 20px;
+
+  padding: 1em 2em;
+}
