@@ -143,6 +143,8 @@ form {
   border: 2px solid white;
   border-radius: 10px;
   padding: 2em 3em;
+
+  background: rgba(255, 255, 255, 0.5);
 }
 
 h2 {
@@ -184,3 +186,21 @@ input:focus {
   margin-top: 1.5em;
 }
 
+.submit-button,
+.reset-button {
+  width: 10em;
+  min-height: 2em;
+
+  background: gray;
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.submit-button {
+  margin-top: 1em;
+}
