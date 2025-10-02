@@ -71,6 +71,9 @@ body,
 }
 
 .form-container {
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
   flex: 1;
 }
 
