@@ -40,7 +40,9 @@ input_author.required = true;
 pages_container.className = 'label pages';
 label_pages.htmlFor = 'pages';
 input_pages.id = 'pages';
-input_pages.type = 'text';
+input_pages.type = 'number';
+input_pages.min = '1';
+input_pages.step = '1';
 input_pages.required = true;
 
 submit_button.type = "submit";

@@ -51,6 +51,7 @@ body,
 
   width: 100%;
   min-width: 300px;
+  min-height: 100px;
   margin: 0 auto;
 
   grid-column: 1;
@@ -110,7 +111,7 @@ form {
   
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1.5em;
 }
@@ -137,3 +138,49 @@ h1 {
 
   padding: 1em 2em;
 }
+
+form {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 2em 3em;
+}
+
+h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  align-self:flex-start;
+}
+
+.label input {
+  max-width: 300px;
+  min-width: 200px;
+  max-height: 30px;
+
+  margin-left: 2em;
+
+  background: none;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+input {
+  padding: 1em;
+  font-size: 1rem;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid grey;
+}
+
+.label.title {
+  margin-top: 1.5em;
+}
+
