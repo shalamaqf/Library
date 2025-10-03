@@ -107,6 +107,10 @@ function Book (title, author, pages) {
     this.isRead = false;
 }
 
+// Put two books in the library as an example
+myLibrary.push(new Book("Pride and Prejudice", "Jane Austen", 448));
+myLibrary.push(new Book("The Lord of the Rings", "J.R.R. Tolkien", 1216));
+myLibrary.push(new Book("1984", "George Orwell", 328));
 
 
 ///////////////////////
