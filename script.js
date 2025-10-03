@@ -206,7 +206,7 @@ function createBookCard(book) {
     viewDetailButton.type = "button";
 
     // Set its text content
-    title.textContent = "Title: " + book.title;
+    title.textContent = "'" + book.title + "'";
     author.textContent = "Author: " + book.author;
     pages.textContent = "Pages: " + book.pages;
     isReadButton.textContent = getReadStatus(book, isReadButton);
